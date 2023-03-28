@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ejercicio_1</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <h1>Jugando con videos</h1>
+        <video src="superheroes.mp4" loop="loop" autoplay="autoplay">
+            <track src="sh_es.vtt" default="default" kind="subtitles" stclang="es" label="Spanish" />
+            Tu navegador no es compatible con este video
+        </video>
+
+        <div id="controls">
+            <button type="button" onclick="video.play();">
+                <img src="" height="50px" width="50px" />
+            </button>
+
+            <button type="button" onclick="video.pause();">
+                <img src="" height="50px" width="50px" />
+            </button>
+
+            <img src="" height="50px" width="50px" />
+            <input type="range" min="0" max="1" step="0.05" value="1"
+                onchange="video.volumen=this.value; vol.innerHTML = parseInt(this.value*100)+`%´;">
+            <span id="vol">100%</span>
+        </div>
+    </div>
+</body>
+</html>
